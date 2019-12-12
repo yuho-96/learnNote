@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>函数的间接调用</title> 
+</head> 
+<body> 
+    <script> 
+    // 在此处补充代码
+    var multiply = function (num1,num2) {
+        return num1 * num2;
+    },
+    data = [3, 4, 2, 1],
+    res = multiply.apply(window,data);
+    console.log(res);
+    </script> 
+</body> 
+</html>

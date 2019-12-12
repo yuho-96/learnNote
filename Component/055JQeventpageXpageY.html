@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+    <style>
+    div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        text-align: center;
+        line-height: 300px;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+    //此处写代码
+    $(document).ready(function () {
+        $('div').mousemove(function (event) {
+            $('div')
+            .text("pageX:"+event
+            .pageX+"pageY:"+event.pageY)
+            .css({'text-align':'center'})
+        })
+    })
+    </script>
+</body>
+</html>

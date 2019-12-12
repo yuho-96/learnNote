@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>正则表达式</title>
+</head>
+<body>
+<script type="text/javascript">
+// 3-19 编程练习
+// 我们学习了非贪婪的重复，那么我们运用非贪婪的知识来练习一下吧，
+//如何匹配字符串str=“cctv have [cctv1]、[cctv2]、[cctv3]、[cctv4]……”中的[cctv1]?
+
+// 任务
+
+// 1、定义要匹配的正则表达式（注意写法有多种）
+
+// 2、用正则表达式的exec（）方法输出匹配的[cctv1]。
+
+    var str="cctv have [cctv1]、[cctv2]、[cctv3]、[cctv4]……";
+	/*此处添加代码*/
+	var pattern1 = /\[cctv\d\]?/,
+        pattern2 = /\[\w\w\w\w\d\]?/;
+    document.write(pattern1.exec(str)+"<br/>");
+    document.write(pattern2.exec(str));
+</script>
+</body>
+</html>

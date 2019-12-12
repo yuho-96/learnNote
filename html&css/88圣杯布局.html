@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: black;
+            position: fixed;
+            top: 0px;
+        }
+        .container .logo img {
+            float: left;
+            height: 60px;
+            line-height: 60px;
+        }
+        .container .nav {
+            float: right;
+            color: white;
+            font-size: 18px;
+            
+        }
+        .container .nav ul li {
+            float: right;
+            margin-right: 30px;
+            
+            list-style: none;
+        }
+        .main {
+            margin-top: 60px;
+            /* text-align: left; */
+            background-color: skyblue;
+        }
+        .main .left {
+            /* background-color: skyblue; */
+            width: 20%;
+            height: 1000px;
+            float: left;
+            padding-top: 100px;
+            padding-left: 5%;
+        }
+        .main .left .l-left {
+            float: left;
+            width: 100%;
+            height: 800px;
+            /* padding-left: 50px; */
+        }
+        span {
+            background-color: yellow;
+        }
+        
+        .main .middle {
+            width: 50%;
+            background-color: pink;
+            height: 1050px;
+            float: left;
+            padding-top: 100px;
+            text-align: center;
+        }
+        .main .middle img {
+            width: 500px;
+        }
+
+        .main .right {
+            /* background-color: skyblue; */
+            width: 20%;
+            height: 800px;
+            float: right;
+            padding-top: 100px;
+            padding-left: 5%;
+        }
+
+        .main .right input,button {
+            width: 230px;
+            height: 40px;
+        }
+        button {
+            background-color: red;
+            color: white;
+        }
+
+        .clear {
+            clear: both;
+        }
+        .foot {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            word-spacing: 40px;
+            background-color: black;
+            font-size: 20px;
+            position: fixed;
+            bottom: 0px;
+        }
+        .foot a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="http://climg.mukewang.com/59093e9c00016ce303000100.png" alt="logo">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>课程</li>
+                <li>职业路径</li>
+                <li>实战</li>
+                <li>猿问</li>
+                <li>手记</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="l-left">
+                <h3>课程推荐</h3>
+                <br>
+                <p><span>职业路径</span>&nbsp;&nbsp;HTML5与CSS3实现动态网页</p>
+                <br>
+                <p><span>职业路径</span>&nbsp;&nbsp;零基础入门Android语法与界面</p>
+                <br>
+                <p><span>职业路径</span>&nbsp;&nbsp;iOS基础语法与常用控件</p>
+                <br>
+                <p><span>职业路径</span>&nbsp;&nbsp;PHP入门开发</p>
+                <br>
+                <p><span>职业路径</span>&nbsp;&nbsp;JAVA入门开发</p>
+            </div>
+            
+        </div>
+
+        <div class="middle">
+            <img src="http://climg.mukewang.com/590037e00001fab706000400.jpg" alt="">
+        </div>
+
+        <div class="right">
+            <h3>登录</h3>
+            <br>
+            <input type="text" placeholder="请输入登陆邮箱/手机号" /><br>
+            <br>
+            <input type="password" placeholder="6-16位密码，区分大小写，不能用空格"><br>
+            <br>
+            <button value="login">登录</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="foot">
+        <a href="#">网站首页</a>
+        <a href="#">合作企业</a>
+        <a href="#">人才招聘</a>
+        <a href="#">联系我们</a>
+        <a href="#">常见问题</a>
+        <a href="#">友情链接</a>
+    </div>
+</body>
+</html>

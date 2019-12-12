@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>水仙花数</title>
+</head>
+<body>
+    <script>
+        // 	填写代码
+        // var narcissusNumber,i,j,k,num;
+        // for(i=1;i<=9;i++){
+        //     for(j=0;j<=9;j++){
+        //         for(k=0;k<=9;k++){
+        //             toString(i);
+        //             toString(j);
+        //             toString(k);
+        //             document.write(i+j+k+"&nbsp;");
+        //             num=parseInt("i*i*i"+"j*j*j"+"k*k*k");
+        //             if(num=="i"+"j"+"k"){
+        //                 narcissusNumber="i"+"j"+"k";
+        //                 document.write(narcissusNumber + "<br/>");
+        //                 document.write("<hr/>")
+        //             }
+        //         }
+        //     }
+        // }
+        //JS会自动转换字符串的数据类型
+        var hundreds,tens,ones;
+        for(var i=100;i<1000;i++){
+            hundreds = parseInt(i / 100);
+            tens = parseInt((i - (hundreds * 100)) / 10);
+            ones = i - (hundreds * 100) - (tens * 10);
+            if(hundreds*hundreds*hundreds+tens*tens*tens+ones*ones*ones==i){
+                document.write(i + "<br/>");
+            }
+        }
+    </script>
+</body>
+</html>

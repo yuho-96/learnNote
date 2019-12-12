@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Math.random()</title>
+</head>
+<body>
+<script>
+    //补充代码
+    var 
+        arr = [],
+        max,
+        min;
+    for(var i = 0;i < 10;i++){
+        arr[i] = Math.ceil(Math.random()*100);
+    }
+    max = Math.max.apply(Math,arr);
+    min = Math.min.apply(Math,arr);
+    document.write(arr + "<br/>" + "这组数中最大的值是：" + max + "，最小的值是:" + min);
+</script>
+</body>
+</html>

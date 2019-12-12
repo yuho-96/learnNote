@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首字母变大写</title>
+</head>
+<body>
+<script>
+    //补充代码
+    var str;
+    str="where is my girl friend";
+    document.write(str+"<br/>");
+    function upper(){
+        var newArr=str.split(" "),aws="";
+        for(var i=0;i<newArr.length;i++){
+            var a = newArr[i];
+            var b = a.charAt(0);
+            var c =b.toUpperCase() + a.substr(1);
+            aws= aws+" "+c;
+        }
+        document.write(aws);
+    }
+    upper(str);
+</script>
+</body>
+</html>

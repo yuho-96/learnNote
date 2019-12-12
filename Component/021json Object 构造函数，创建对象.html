@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <!-- 使用json、Object、构造函数3种方式创建一个对象。对象有成员属性name，值为“imooc”。
+有成员方法action，所做动作为弹框，弹出内容为“前端”
+
+任务
+
+1、json方式创建对象格式为：var obj={}
+
+2、Object方式创建对象格式为：var obj= new Object（）
+
+3、构造函数方式创建对象格式为：先声明函数，函数内使用this指向属性与方法。最后实例化函数。 -->
+	<script type="text/javascript">  
+		// // json格式
+		// var obj = {
+        //     name:"imooc",
+        //     action:function(){
+        //         alert(前端);
+        //     }
+        // }
+		// // Object方式
+        // var obj = new Object();
+        //     obj.name="imooc";
+        //     obj.action=function(){
+        //         alert("前端");
+        //     }
+		// 构造函数方式
+        function setNewObject(name){
+            this[name] = name;
+            this.action = function (){
+                alert("前端");
+            }
+        }
+        var newObject = new setNewObject("imooc");
+            newObject.action();
+	</script>
+</body>
+</html>

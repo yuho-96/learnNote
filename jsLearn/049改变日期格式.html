@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>改变日期格式</title>
+</head>
+<body>
+<script>
+    //补充代码
+    function changeDateStyle(){
+        var date = new Date();
+        var year = date.getFullYear(),
+            month = date.getMonth()+1,
+            day = date.getDate(),
+            week = date.getDay(),
+            time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds(),
+            weeks = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    
+        document.write("今天是" + year + "年" + month + "月" + day + "日" + weeks[week] + "<br/>");
+        document.write(time);
+    }
+    changeDateStyle();
+</script>
+</body>
+</html>

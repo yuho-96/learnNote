@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>splice</title>
+</head>
+<body>
+<script>
+   //补充代码
+   var arr=[],str,result;
+   while(str!=-1){
+        str=prompt("请输入您想要输出的字符：");
+        arr.push(str);
+   }
+   arr.length-=1;
+   result=arr.splice(0,2,"hello");
+   document.write(arr);
+</script>
+</body>
+</html>

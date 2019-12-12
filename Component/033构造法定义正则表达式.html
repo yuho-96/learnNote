@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>正则验证</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    /* 
+        2-12 编程练习
+    现有获取到的用户输入var userInput = '正则'; 
+    利用我们刚学过的知识来创建正则表达式，匹配字符串'正则表达式'中的'正则'两个字符。
+
+    任务
+
+    1.用构造方法定义正则表达式，并且将要匹配的字符（userInput）传进去
+
+    2.用test和exec方法分别进行测试，注意每个输出结果都用“/”隔开。
+    */    
+    var str = '正则表达式';
+	var userInput = '正则';
+	/*此处添加代码*/
+	var pattern = new RegExp(userInput,"i");
+    // console.log(pattren);
+    document.write(pattern.test(str) + "/" + pattern.exec(str));
+</script>
+</body>
+</html>

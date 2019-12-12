@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+    <style>
+    div {
+        width: 300px;
+        height: 200px;
+        overflow: scroll;
+    }
+    </style>
+</head>
+
+<body>
+    <p>请试着滚动 DIV 中的文本：</p>
+    <div>慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂
+        <br /><br />
+        慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂
+        <br /><br />
+        慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂
+        <br /><br />
+        慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂 慕课网-程序员的梦工厂
+    </div>
+    <p>滚动了 <span>0</span> 次。</p>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+    //此处写代码
+    $(document).ready(function () {
+        var num = 0;
+        $('div').scroll(function () {
+            num++;
+            $('span').text(num);
+        });
+    });
+    </script>
+</body>
+
+</html>

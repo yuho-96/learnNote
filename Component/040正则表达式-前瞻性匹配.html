@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>正则表达式</title>
+</head>
+<body>
+
+<script type="text/javaScript">
+/*
+    我们学习了正则的前瞻性匹配，接下来我们就运用前瞻性匹配来获取
+    字符串str="Java 是一门很好的编程语言，JavaScript是非常好、非常实用的脚本语言！"
+    中JavaScript中的Java。
+*/
+    var str="Java 是一门很好的编程语言，JavaScript是非常好、非常实用的脚本语言！";
+	/*此处写代码*/
+	var pattern = /Java(?=Script)/;
+    document.write(pattern.exec(str))
+</script>
+</body>
+</html>

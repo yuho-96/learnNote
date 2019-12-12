@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>正则表达式的常用字符类</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var str = '192.168.1.1@Admin';
+	/*此处写代码*/
+	var pattern1 = /1\.1\@Admin/;
+    var pattern2 = /\d\.\d\@Admin/;
+    var pattern3 = /\S\S\S\@\S\S\S\S\S/;
+    var pattern3 = /\w\W\w\@\w\w\w\w\w/;
+    document.write(pattern1.exec(str) + "<br/>");
+    document.write(pattern2.exec(str) + "<br/>");
+    document.write(pattern3.exec(str) + "<br/>");
+</script>
+</body>
+</html>

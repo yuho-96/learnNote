@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attributes</title>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		//在此处填写代码
+        var box = document.getElementById("box");
+        var data = document.createAttribute("data");
+        data.value = "wrap";
+        box.attributes.setNamedItem(data);
+    </script>
+</body>
+</html>

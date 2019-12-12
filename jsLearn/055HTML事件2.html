@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML事件</title>
+</head>
+<body>
+    <!--补充代码-->
+    <button class="btn" onmousemove="move(this,'purple')" onmouseout="out(this,'gray')">开始</button>
+    &nbsp;
+    <button class="btn" onmousemove="move(this,'yellow')" onmouseout="out(this,'gray')">结束</button>
+	<script type="text/javascript">
+		//补充代码
+        function move(btn,color){
+            btn.style.color=color;
+        }
+        function out(btn,color){
+            btn.style.color=color;
+        }  
+	</script>
+</body>
+</html>

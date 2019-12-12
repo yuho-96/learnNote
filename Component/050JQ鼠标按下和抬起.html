@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+    <style type="text/css">
+    div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        text-align: center;
+        line-height: 200px; 
+    }
+    </style>
+</head>
+
+<body>
+    <div>背景颜色为白色</div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>    
+    <script>
+    //此处写代码
+    $(document).ready(function () {
+        $('div').mousedown(function(){
+            $(this).text('背景颜色为红色').css({'backgroundColor':'red'});
+        });
+        $('div').mouseup(function(){
+            $(this).text('背景颜色为黄色').css({'backgroundColor':'yellow'});
+        });
+    });
+    </script>
+</body>
+</html>

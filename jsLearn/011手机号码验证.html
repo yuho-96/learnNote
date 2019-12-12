@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手机号码验证</title>
+</head>
+<body>
+    <script>
+		//补充代码
+        var phoneNumber=prompt("请输入您的手机号：");
+        if(phoneNumber.length!=11){
+            alert("请输入11位手机号码！");
+        //用typeof(phoneNumber)!="number" 为什么prompt()输入的是数值
+        //typeof返回phoneNumber是string类型
+        }else if(isNaN(phoneNumber)){
+            alert("您输入的手机号码必须为数字！");
+        }else{
+            alert("号码输入正确！");
+        }
+	</script>
+</body>
+</html>

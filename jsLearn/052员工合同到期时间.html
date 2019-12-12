@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>员工合同到期时间</title>
+</head>
+<body>
+<script>
+    //?代码补充
+    function offContactYearCalc(){
+        var date = new Date(),
+            year = date.setFullYear(prompt("请输入员工入职年份：")),
+            month = date.setMonth(prompt("请输入员工入职月份：")),
+            day = date.setDate(prompt("请输入员工入职时间："));
+        var offDate = new Date(date.getFullYear() + 3, date.getMonth() - 1, date.getDate());
+        document.write("该员工入职时间是：" + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate());
+        document.write("<br/>")
+        document.write("该员工合同到期时间是：" + offDate.getFullYear() + "-" + (offDate.getMonth() +1) + "-" + offDate.getDate());
+    }
+    offContactYearCalc();
+</script>
+</body>
+</html>

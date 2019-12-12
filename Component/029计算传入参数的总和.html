@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        // 7-7 编程练习
+        // 小伙伴们 ，学习了arguments之后 ，下面来创建一个函数 ，实现计算参数总和的功能 。
+
+        // 任务
+
+        // 1.创建一个函数Count，在Count中使用for循环计算出参数的总和
+
+        // 2.调用函数Count ,并传入至少两个参数
+
+        // 3.在页面中输出参数的总和
+
+
+        // 补充代码
+        function count() {
+            var sum = 0;
+                for(var i=0;i<arguments.length;i++){
+                    sum +=arguments[i];
+                }
+            return sum;
+        }
+        var b=count(9,5,2,7);
+        console.log(b);
+
+        //闭包可以实现吗？
+        // function count() {
+        //     var sum = 0;
+        //     function a() {
+        //         //参数没有传进a，请问怎么改可以实现
+        //         for(var i=0;i<arguments.length;i++){
+        //             sum +=arguments[i];
+        //         }
+        //     }
+        //     return a;
+        // }
+        // var b=count(9,5,2,7);
+        // console.log(b)();
+    </script>
+</body>
+</html>

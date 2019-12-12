@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 简易计算器</title>
+    <style type="text/css">
+        body{
+            background-color: #cccccc;
+        }
+        .main{
+            width: 800px;
+            height: 100px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            margin-left: -400px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .title{
+            font-style: italic;
+            font-variant: small-caps;
+            font-weight: thin;
+            font-size: 36px;
+            font-family: "Microsoft YaHei";
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p class="title">简易计算器-Simple Calculator</p>
+        <input type='text' id='num1' />
+        <select id='operate'>
+            <option value='+'>+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type='text' id='num2' />
+        <input type='button' value=' = ' onclick="count()" />
+        <input type='text' id='result' />    
+    </div>
+    <script type="text/javascript">
+        function count() {
+            /*此处写代码*/
+            var num1 = document.getElementById("num1").value,
+                num2 = document.getElementById("num2").value,
+                operate = document.getElementById("operate"),
+                result = document.getElementById("result");
+            function add(num1,num2) {
+                return +num1 + +num2;
+            }                
+            function subtract(num1,num2) {
+                return num1-num2;
+            }
+            function multiply(num1,num2) {
+                return num1*num2;
+            }
+            function divide(num1,num2) {
+                return num1/num2;
+            }
+            operate.onchange = function () {
+                switch (operate.value) {
+                    case "+":
+                        return add(num1,num2);
+                        break;
+                    case "-":
+                        return subtract(num1,num2);
+                        break;
+                    case "*":
+                        return multiply(num1,num2);
+                        break;
+                    case "/":
+                        return divide(num1,num2);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            result.value = operate.onchange();
+        }
+    </script>
+</body>
+</html>

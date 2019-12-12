@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //7-3 编程练习
+        // 小伙伴们 ，学习完课程后 ，下面我们来创建两个数组 ，并运用apply实现两个数组的拼接哦~
+
+        // 任务
+
+        // 1. 定义两个数组，每个数组中不少于两个元素。
+
+        // 2 .使用apply方法，把第二个数组中的元素加入到第一个数组中。
+
+        // 3. 在控制台输出第一个数组。
+
+        //补充代码  
+        var arr1 = new Array(1,3,5,7);
+        var arr2 = new Array(2,4,6,8);
+
+        arr1.push.apply(arr1,arr2);
+        console.log(arr1);
+    </script>
+</body>
+</html>

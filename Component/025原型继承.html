@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 6-4 编程练习
+        // 学习了原型继承 ，我们来创建一个动物类的对象 ,对象中有动物名称和数量的属性 。
+        // 创建一个猫的对象并继承动物类对象 ，并为猫对象定义一个方法 。
+        // 实例化一个猫对象 ，调用其方法 ，弹出动物名称和数量。
+
+        // 任务
+
+        // 1. 使用构造方法创建一个对象Animal , 并为其添加属性名称和数量。
+        // 2. 创建一个动物对象Cat并使用原型的方式继承对象Animal。
+        // 3. 使用原型的方式为Cat定义一个方法 info ,方法中弹出动物名称和数量。
+        // 4. 实例化Cat并调用方法info。
+
+        //  补充代码 
+        function Animal(name,num){
+            this.name = name;
+            this.num = num;
+        }
+        var Cat = function  (){
+            this.info =function (){
+                alert(this.name + this.num);
+            }
+        };
+        Cat.prototype = new Animal("aaa",22);
+        var aaa = new Cat();
+        aaa.info();
+    </script>
+</body>
+</html>

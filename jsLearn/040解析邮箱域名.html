@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>解析用户名和邮箱域名</title>
+</head>
+<body>
+<script>
+    //补充代码
+    var userEmail=prompt("请输入您的邮箱："),index1,index2,uesrName,userAddress;
+    index1=parseInt(userEmail.indexOf("@"));
+    uesrName=userEmail.substr(0,index1);
+    index2=parseInt(index1+1);
+    userAddress=userEmail.substr(index2);
+    document.write("邮箱的用户名是：" + uesrName + "<br/>");
+    document.write("登陆的邮箱域名是：" + userAddress + "邮箱" + "<br/>");
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-4</title>
+</head>
+<body>
+        <!-- 1创建一个构造函数student，student中使用字面式定义一个空对象privateStore，
+            用来存放私有的数据。
+
+        2. student中定义一个函数_set , 用来设置学生的信息 (姓名，性别和年龄) 。
+        
+        3. student中定义一个函数_get , 用来获取信息 。
+        
+        4. student中定义一个方法get ，方法中返回函数_get。
+        
+        5. student中定义一个方法set， 方法中返回函数_set。
+        
+        6.实例化对象student，并调用set方法为student添加信息 。如 ( "小明", "男", 23 )
+        
+        7.调用get方法输出student的所有信息。 -->
+<script>
+
+//补充代码 
+function Student() {
+    var privateStore={},
+    _set = function (name,sex,age) {
+        privateStore.name = name;
+        privateStore.sex = sex;
+        privateStore.age = age;
+    },
+    _get = function () {
+        console.log(privateStore.name + " " + privateStore.sex + " " + privateStore.age);
+    };
+    this.set = function (name,sex,age) {
+        return _set;
+    }
+    this.get = function () {
+        return _get;
+    }
+}
+var boy = new Student();
+boy.set()("xiaoming","male","23");
+boy.get()();
+</script>
+</body>
+</html>

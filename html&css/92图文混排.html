@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">	
+	<title>CSS布局</title>
+	<style type="text/css">
+    /*此处写代码*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .header {
+            text-align: center;
+            background-color: yellow;
+            height: 80px;
+            line-height: 80px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .part1 {
+            float: left;
+            width: 30%;
+            position: relative;
+            left: 15%;
+            top: 5%;
+
+        }
+        .part2 {
+            float: right;
+            width: 30%;
+            position: relative;
+            right: 15%;
+            top: 5%;
+        }
+        .main {
+            width: 100%;
+            background-color: skyblue;
+        }
+        .clear {
+            clear: both;
+        }
+	</style>
+</head>
+<body>
+    <!-- 此处写代码 -->
+    <div class="header">
+        <h1>ENJOY THE LIFE</h1>
+    </div>
+    <div class="main">
+        <div class="left">
+            <dl class="part1">
+                <dt>
+                    <img src="http://climg.mukewang.com/58f829090001a4b504260240.jpg" alt="">
+                </dt>
+                <dd>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, saepe!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nostrum?
+                </dd>
+            </dl>
+        </div>
+
+        <div class="right">
+            <dl class="part2">
+                <dt>
+                    <img src="http://climg.mukewang.com/58f8290f0001558804260240.jpg" alt="">
+                </dt>
+                <dd>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, quas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, neque.
+                </dd>
+            </dl>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

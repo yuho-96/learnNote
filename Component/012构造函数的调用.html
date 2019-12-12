@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>构造函数的调用</title> 
+</head> 
+<body> 
+    <script type="text/javascript"> 
+    // 在此完成任务
+    var person = new Object();
+    person = {
+        name:"xiaoming",
+        age:"18",
+        sex:"male"
+    }
+    var arr = new Array();
+    arr = ["parent","child"];
+    console.log(person);
+    console.log(arr);
+
+    var add = Function("num1","num2","return num1+num2;");
+    var res=add(1,2);
+    console.log(res);
+    </script> 
+</body> 
+</html>

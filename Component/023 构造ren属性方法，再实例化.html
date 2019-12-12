@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    //创建ren对象，以及属性
+    function ren() {
+        this.name = "melo";
+        this.age = "23";
+        this.length = "180";
+        this.favorite = function () {
+            alert("i love codeing");
+        };
+    }
+    //实例化ren ，并遍历
+    var me = new ren();
+    for(var i in me){
+        //alert(me[i]);//遍历值
+        alert(i); //遍历属性名（索引）
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title> arguments</title> 
+</head> 
+<body> 
+    <p id="test" style="background-color: red; color: blue;">我是一个段落！</p>
+<script type="text/javascript"> 
+    // 在此处补充代码
+    var text = document.getElementById("text");
+    
+    function css(elem) {
+        if (arguments.length <= 1) {
+            return;
+        } else if (arguments.length == 2){
+            return elem.style[arguments[1]];
+        } else {
+            elem.style[arguments[1]]=arguments[2];
+        }
+    }
+    console.log(css(text,'color'));
+    css(text,'color','black');
+</script> 
+</body> 
+</html>

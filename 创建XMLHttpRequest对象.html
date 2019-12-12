@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 第一步：创建XMLHttpRequest对象，也就是创建一个异步调用对象：
+        // 封装通用的xhr对象，目的是兼容各个版本
+        function createXHR() {
+            // 判断浏览器是否将XMLHttpRequest作为本地对象实现，针对IE7，firefox,opera等
+            if(typeof XMLHttpRequest != undefined) {
+                return new XMLHttpRequest();
+            } else if(typeof ActiveXObject != undefined) {
+                // 将所有可能出现的ActiveXObject版本放在一个数组里
+                var xhrArr = ['Microsoft.XMLHTTP','MSXML2.XMLHTTP.6.0',
+                'MSXML2.XMLHTTP.5.0','MSXML2.XMLHTTP.4.0','MSXML2.XMLHTTP.3.0',
+                'MSXML2.XMLHTTP.2.0'];
+                // 遍历创建XMLHttpRequest对象
+                var len = xhrArr.length;
+                for(var i=0;i<len;i++) {
+                    try {
+                        // 创建XMLHttpRequest对象
+                        xhr = new ActiveXObject(xhrArr[i]);
+                        break;
+                    }
+                    catch(ex) {
+
+                    }
+                }
+                return xhr;
+            } else {
+                throw new Error('No XHR object availabel');
+            }
+        }
+        // XMLHttpRequest对象
+        var xhr = createXHR();
+        console.log(xhr);    
+    </script>
+</body>
+</html>

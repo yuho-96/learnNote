@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>猜数字</title>
+</head>
+<body>
+    <script>
+	   //补充代码
+       var input;
+       input=prompt("请输入您猜的数字：")
+       while(input!=5){
+           if(input>5){
+                alert("猜大了");
+                input=prompt("继续猜");
+           }else{
+               alert("猜小了");
+               input=prompt("继续猜");
+           }
+       }
+       alert("猜对了");
+	</script>
+</body>
+</html>

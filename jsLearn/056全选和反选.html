@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全选和反选</title>
+</head>
+<body>
+    <input type="button" value="全选">
+    <script>
+        // 此处填写代码
+        var val=document.getElementsByTagName("input")[0];
+        function change(){
+            if(val.value=="全选"){
+                this.value="反选";
+            } else{
+                this.value="全选";
+            }
+        }
+        val.onclick=change;
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 6-8 编程练习
+        // 使用构造方法创建一个动物类对象Animal， 对象中定义属性有动物名称和数量 ,并且定义一个方法。
+        // 再创建两个动物的对象(如猫和狗)，一个动物使用call方法实现继承Animal，
+        // 一个动物使用apply方法实现继承Animal。分别实例化两个动物并弹出动物的名称和数量。
+
+        // 任务
+
+        // 1．使用构造方法创建对象Animal，对象中定义属性有动物名称和数量 ,
+        // 并且定义一个方法getInfo , 方法中输出动物的名称和数量
+
+        // 2．创建一个对象Cat ,使用call方法实现继承对象Animal 。
+
+        // 3．创建一个对象Dog ,使用apply方法实现继承对象Animal。
+
+        // 4．实例化Cat和Dog，分别调用两个对象的方法getInfo输出动物的名称与数量。
+
+        //补充代码
+        function Animal(name,num) {
+            this.name = name;
+            this.num = num;
+            this.getInfo = function () {
+                alert(this.name + this.num);
+            };
+        }
+        var Cat = function (name,num) {
+            this.name = name;
+            this.num = num;
+            Animal.call(this,name,num);
+        };
+        var Dog = function (name,num) {
+            this.name = name;
+            this.num = num;
+            Animal.apply(this,[name,num]);
+        };
+
+        var c = new Cat('ccc',123);
+        var d = new Dog('ddd',321);
+        c.getInfo();
+        d.getInfo();
+
+    </script>
+</body>
+</html>

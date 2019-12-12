@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">按钮1</div>
+    <div class="bind">按钮2</div>
+    <div class="unbind">按钮3</div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function flash(){
+                $('.one').click(function(){
+                    $('div').show().fadeOut('slow')
+                })
+            }
+            $('.bind').click(function(){
+                $('.one').text("yes");
+                $(document).on('click','.one',flash);
+            });
+            $('.unbind').click(function(){
+                $(document).off('click','.one',flash);
+                $(".one").text("no")
+            })
+        })
+    </script>
+</body>
+</html>

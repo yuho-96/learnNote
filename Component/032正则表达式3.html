@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>正则表达式</title>
+</head>
+<body>
+
+<script type="text/javascript">
+/*2-9 编程练习
+    我们来运用这节课学到的知识来练习一下，匹配字符串
+        'JavaScript_RegExp_5@gmail.com'中的‘_RegExp_5@gm’，
+    并用exec和test方法验证匹配结果。
+
+    任务
+    1、分别用两种字面量和构造函数的方法定义好正则表达式。
+    2、用我们刚学的两个方法进行一 一验证
+    3、运用i修饰符定义正则表达式
+    4、用test和exec方法分别验证运用到i修饰符的正则表达式
+*/
+    var str = 'JavaScript_RegExp_5@gmail.com';
+	/*此处写代码*/
+    var pattern = /_RegExp_5@gmail.com/;
+    console.log(pattern.test(str) + "/" + pattern.exec(str));
+</script>
+</body>
+</html>

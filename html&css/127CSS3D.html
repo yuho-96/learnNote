@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2-3</title>
+<style type="text/css">
+section{
+width:300px;
+height:200px;
+background:red;
+}
+div{
+width: 0;
+height: 0;
+border-left: 100px solid transparent;
+border-bottom: 70px solid yellow;
+border-right: 100px solid transparent;
+transform: rotate(36deg);
+position: relative;
+margin: 200px;
+}
+div::after{
+content: '';
+display: block;
+width: 0;
+height: 0;
+border-left: 100px solid transparent;
+border-bottom: 70px solid yellow;
+border-right: 100px solid transparent;
+position: relative;
+transform: rotate(74deg);
+left:-98px;
+top: -67px;
+}
+div::before{
+content: '';
+display: block;
+width: 0;
+height: 0;
+border-left: 100px solid transparent;
+border-bottom: 70px solid yellow;
+border-right: 100px solid transparent;
+position: relative;
+transform: rotate(290deg);
+left: -103px;
+top: 2px;
+}
+.one{
+transform: scale(.3) translate(-420%,70%) rotate(35deg);
+}
+.two{
+transform: scale(.1) translate(-1000%,-4050%)
+rotate(-20deg);
+}
+.three{
+transform: scale(.1) translate(-900%,-7600%)
+rotate(20deg);
+}
+.four{
+transform: scale(.1) translate(-890%,-11050%)
+rotate(35deg);
+}
+.five{
+transform: scale(.1) translate(-1000%,-14600%)
+rotate(55deg);
+}
+</style>
+</head>
+<body>
+<section>
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+<div class="four"></div>
+<div class="five"></div>
+</section>
+</body>
+</html>

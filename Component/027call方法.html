@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+//     7-2 编程练习
+// 小伙伴们 ,学习了call方法后 , 下面我们来动手实现一个对象使用call方法继承另一个对象。
+
+// 任务
+
+// 1．用构造方法创建一个动物类对象Animal , 添加属性名称和食物 ,并添加一个方法say ,方法中弹出动物的名称和食物
+
+// 2．用构造方法创建一个对象Dog , 并在对象里面使用call方法实现继承Animal。
+
+// 3.  实例化Dog ,调用Dog的say方法 , 弹出 “狗狗喜欢吃骨头”
+
+        //补充代码
+        var Animal = function (name,food) {
+            this.name = name;
+            this.food = food;
+            this.say = function () {
+                alert(this.name + "喜欢吃" + this.food);
+            };
+        };
+        var Dog = function (name,food) {
+            this.name = name;
+            this.food = food;
+            Animal.call(this,name,food)
+        };
+        var d = new Dog("狗狗","骨头");
+        d.say();
+    </script> 
+</body>
+</html>

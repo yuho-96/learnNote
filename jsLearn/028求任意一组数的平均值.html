@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>arguments</title>
+</head>
+<body>
+    <script>
+		//补充代码
+
+        function getAvg(){
+            var len=arguments.length,sum=0,avg;
+            for(var i=0;i<len;i++){
+                sum+=arguments[i];
+            }
+            return sum/len;
+        }
+        avg=getAvg(10,10,10);
+        alert(parseInt(avg));
+
+	</script>
+</body>
+</html>
