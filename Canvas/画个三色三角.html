@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <style>
+        canvas{background-color:lightpink;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600">
+        您的浏览器不支持canvas
+    </canvas>
+    <script>
+	//在此处填写代码
+    var canvas = document.getElementById('canvas');
+    var side1 = canvas.getContext('2d');
+    var side2 = canvas.getContext('2d');
+    var side3 = canvas.getContext('2d');
+    side1.moveTo(300,200);
+    side1.lineTo(450,400);
+    side1.strokeStyle = 'red';
+    side1.stroke();
+
+    side2.beginPath();
+    side2.moveTo(450,400);
+    side2.lineTo(150,400);
+    side2.strokeStyle = 'green';
+    side2.stroke();
+
+    side3.beginPath();
+    side3.moveTo(150,400);
+    side3.lineTo(300,200);
+    side3.strokeStyle = 'blue';
+    side3.stroke();
+	</script>
+</body>
+
+</html>
