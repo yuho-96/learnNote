@@ -14,7 +14,78 @@
     
     <script>
         //在此处写出代码
-        
+        var rob = document.getElementById('canvas');
+        var side1 = rob.getContext("2d");
+        var side2 = rob.getContext("2d");
+        var side3 = rob.getContext("2d");
+        var side4 = rob.getContext("2d");
+        var side5 = rob.getContext("2d");
+        var side6 = rob.getContext("2d");
+        var side7 = rob.getContext("2d");
+        var side8 = rob.getContext("2d");
+        var side9 = rob.getContext("2d");
+        var side10 = rob.getContext("2d");
+        var side11 = rob.getContext("2d");
+        var side12 = rob.getContext("2d");
+        var side13 = rob.getContext("2d");
+
+        //左天线
+        side1.moveTo(300,100);
+        side1.lineTo(350,200);
+        side1.stroke();
+
+        //右天线
+        side2.beginPath();
+        side2.moveTo(500,100);
+        side2.lineTo(450,200);
+        side2.stroke();
+
+        //左耳朵
+        side3.beginPath();
+        side3.strokeRect(280,230,20,30);
+
+        //右耳朵
+        side4.beginPath();
+        side4.strokeRect(500,230,20,30);
+
+        //头部
+        side5.beginPath();
+        side5.strokeRect(300,200,200,100);
+
+        //左眼
+        side6.beginPath();
+        side6.arc(360,245,10,0,2*Math.PI,true);
+        side6.stroke();
+
+        //右眼
+        side7.beginPath();
+        side7.arc(440,245,10,0,2*Math.PI,true);
+        side7.stroke();
+
+        //嘴巴
+        side8.beginPath();
+        side8.strokeRect(375,260,50,20);
+
+        //左手
+        side9.beginPath();
+        side9.strokeRect(130,390,200,20);
+
+        //右手
+        side10.beginPath();
+        side10.strokeRect(470,390,200,20);
+
+        //身体
+        side11.beginPath();
+        side11.strokeRect(330,300,140,200);
+
+        //左腿
+        side12.beginPath();
+        side12.strokeRect(340,500,20,200);
+
+        //右腿
+        side13.beginPath();
+        side13.strokeRect(440,500,20,200);
+
 	</script>
 </body>
 
