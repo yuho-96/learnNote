@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvas渐变</title>
+</head>
+<body>
+    <canvas id="canvas" width="600px" height="600px">您的浏览器不支持</canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        //在此处补充代码
+        var lgc = context.createLinearGradient(100,100,200,200);
+        lgc.addColorStop(0,"rgba(255,255,0,1)");
+        lgc.addColorStop(0.5,"rgba(0,255,255,1)");
+        lgc.addColorStop(1,"rgba(255,0,255,1)");
+        context.arc(150,150,80,0,Math.PI*2,true);
+        context.fillStyle = lgc;
+        context.fill();
+    </script>
+</body>
+</html>

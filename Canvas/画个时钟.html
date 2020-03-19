@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>小时钟</title>
+    <style>
+        canvas{background-color:lightblue;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600px" height="600px">您的浏览器不支持</canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        //在此处编写代码
+
+        context.translate(300,300);
+        context.save();
+        context.arc(0,0,100,0,Math.PI*2,true);
+        context.fillStyle = "rgba(255,255,0,0.5)";
+        context.fill();
+        //context.stroke();
+        for(var i=0;i<4;i++){
+            context.rotate(Math.PI/2);
+            context.moveTo(90,0);
+            context.lineTo(100,0);
+        }
+        context.moveTo(0,0);
+        context.lineTo(80,0);
+
+        context.restore();
+
+        context.moveTo(0,0);
+        context.lineTo(10,-60);
+        context.stroke();
+    </script>
+</body>
+</html>
