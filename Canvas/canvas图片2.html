@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas图片</title>
+    <style>
+        canvas{background-color:lightblue;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800px" height="800px">您的浏览器不支持canvas
+    </canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext('2d');
+        //此处填充代码
+        //设置圆
+        context.arc(400,400,120,0,2*Math.PI,true);
+        context.fillStyle = '#7d7263';
+        context.fill();
+        //设置image图片
+        var img1 = new Image();
+        img1.src = "http://climg.mukewang.com/59a7df40000165fa06000600.jpg";
+        img1.onload = function(){
+            context.drawImage(img1,200,10,250,220,325,325,150,150);
+        };
+    </script>
+</body>
+</html>

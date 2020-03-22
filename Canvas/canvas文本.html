@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas字体</title>
+    <style>
+        canvas{background-color:lightblue;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800px" height="800px">您的浏览器不支持canvas
+    </canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext('2d');
+        //此处补充代码
+
+        //设置文本样式
+        var str0 = '鲨鱼没有鲨鱼线';
+        context.font = 'bold 30px 微软雅黑';
+        context.fillStyle = 'blue';
+        //水平，垂直居中
+        context.textAlign = 'center';
+        context.baseLine = 'middle'; 
+        //填充文本
+        context.fillText(str0,400,400);
+        //获取str0的宽度并填充
+        var wid = context.measureText(str0).width;
+        context.fillText('字体大小是：'+ wid,400,500);
+    </script>
+</body>
+</html>

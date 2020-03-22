@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas图片</title>
+    <style>
+        canvas{background-color:lightblue;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800px" height="800px">您的浏览器不支持canvas
+    </canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext('2d');
+        //在此处补充代码
+        //先画一个圆
+        context.fillStyle = 'black';
+        context.arc(400,400,160,0,2*Math.PI,true);
+        context.fill(); 
+        //添加图片
+        var img = new Image();
+        img.src = 'http://climg.mukewang.com/59859f4d00014f1503000100.jpg';
+        img.onload = function (){
+            context.drawImage(img,250,350);
+        }
+    </script>
+</body>
+</html>

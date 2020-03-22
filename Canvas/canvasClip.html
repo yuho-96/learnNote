@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>clip</title>
+    <style>
+        canvas{background-color:lightblue;}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800px" height="800px">
+        您的浏览器不支持canvas
+    </canvas>
+    <script>
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        //在此处补充代码
+        context.arc(400,400,200,0,2*Math.PI,true);
+        //context.stroke();
+        context.clip();
+        //图案填充
+        context.fillStyle = 'green';
+        context.fillRect(200,200,200,200);
+        context.fillStyle = 'red';
+        context.fillRect(400,200,200,200);
+        context.fillStyle = 'pink';
+        context.fillRect(200,400,200,200);
+        context.fillStyle = 'yellow';
+        context.fillRect(400,400,200,200);
+    </script>
+</body>
+</html>
